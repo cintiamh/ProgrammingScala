@@ -88,3 +88,67 @@ scala> :quit
 ```
 
 To exit Scala's interpreter.
+
+## Step 4: Write some Scala scripts
+
+You can create a new worksheet called `hello.sc` and run it with scala:
+
+```
+println("Hello, world, from a script!")
+```
+
+```
+$ scala hello.sc
+```
+
+Then you'll get the response:
+
+```
+Hello, world, from a script!
+res0: Unit = ()
+```
+
+Command line arguments to a Scala script are available via a Scala array named `args`.
+
+```
+// Say hello to the first argument
+println("Hello, " + args(0) + "!")
+```
+
+```
+$ scala helloarg.scala planet
+```
+
+## Step 5: Loop with while; decide with if
+
+```scala
+var i = 0
+while (i < args.length) {
+  println(args(i))
+  i += 1
+}
+```
+
+## Step 6: Iterate with foreach and for
+
+The previous code with the `while` loop was in an imperative style. In this style you give one imperative
+command at a time, iterate with loops, and often mutate state shared between different functions. But in
+the goal here is to program Scala in a more functional style.
+
+One of the main characteristics of a functional language is that functions are first class constructs.
+
+```scala
+args.foreach(arg => println(arg))
+```
+
+If a function literal consists of one statement that takes a single argument, you don't need to explicitly
+name and specify the argument.
+
+```scala
+args.foreach(println)
+```
+
+```scala
+for (arg <- args)
+    println(arg)
+```
