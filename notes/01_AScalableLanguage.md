@@ -42,3 +42,17 @@ Scala was designed for seamless interoperability with Java. Scala programs compi
 Scala programs tend to be short because it is less noisy compared to Java.
 
 ### Scala is high-level
+
+Scala helps you manage complexity by letting you raise the level of abstraction in the interfaces you
+design and use.
+
+### Scala is statically typed
+
+Scala allows you to parameterize types with generics, to combine types using intersections, and to hide 
+details of types using abstract types.
+
+Scala's type system addresses nicely two of the usual concerns about static typing: Verbosity is avoided
+through type interface, and flexibility is gained through pattern matching and several new ways to write
+and compose types. Some of the benefits of static types are: verifiable properties of program abstractions, 
+safe refactorings, and better documentation.
+ 
